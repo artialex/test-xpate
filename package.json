@@ -1,0 +1,20 @@
+{
+  "name": "animation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel app/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gsap": "3.0.5",
+    "parcel-bundler": "1.12.4"
+  },
+  "devDependencies": {
+    "@catsonis/prettier-config": "1.0.1"
+  },
+  "prettier": "@catsonis/prettier-config"
+}

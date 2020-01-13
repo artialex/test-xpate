@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 600px;
+  overflow: hidden;
+}
+
+/* -- Container ------------------------------------------------------------- */
+
+.wrapper {
+  /*content: '';*/
+  /*width: 100px;*/
+  /*height: 100px;*/
+}
+
+/* -- Button ---------------------------------------------------------------- */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: linear-gradient(#0064ff, #1400fd);
+  user-select: none;
+  border-radius: 24px;
+  cursor: pointer;
+  position: relative;
+}
+
+.button.activatable:active {
+  background: linear-gradient(#222fba, #100d64);
+}
+
+/* Safe Zone */
+.button::before {
+  content: '';
+  display: block;
+  width: 160px;
+  height: 60px;
+  position: absolute;
+  border-radius: 50px;
+  /*background: rgba(255, 99, 71, 0.17);*/
+}
+
+/* Shadow */
+.button::after {
+  display: none;
+  content: '';
+  width: 140px;
+  height: 48px;
+  border-radius: 24px;
+
+  position: absolute;
+  box-shadow: 4px 4px 4px 2px #b9b9b9;
+}
+
+/* -- Gray Block ------------------------------------------------------------ */
+
+.gray-block {
+  width: 600px;
+  height: 120px;
+  background: linear-gradient(#ced1ce, #bbbbbb);
+  font-size: 24px;
+  color: black;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  box-shadow: 0 12px 12px -6px rgba(0, 0, 0, 0.33);
+}
+
+.gray-block:hover {
+  background: linear-gradient(#c4c6c3, #b3b3b3);
+}
+
+.gray-block::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 120%;
+  height: 140%;
+  left: -10%;
+  top: -20%;
+  background-color: transparent;
+}
