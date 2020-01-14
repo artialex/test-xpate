@@ -120,7 +120,6 @@ let handleMouseLeave = () => {
 }
 
 blueButton.addEventListener('mouseenter', handleMouseEnter)
-
 blueButton.addEventListener('mouseleave', handleMouseLeave)
 
 // -- Blue Button Animation ----------------------------------------------------
@@ -140,7 +139,7 @@ blueButtonAnim.fromTo(
     height: 48
   },
   {
-    duration: 0.4,
+    duration: 0.3,
     ease: 'sine.in',
     rotationY: 180,
     width: '101vw', // Fixes 1 pixel gap on iPhone

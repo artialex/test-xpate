@@ -51,6 +51,7 @@ body {
   background: linear-gradient(#ced1ce, #bbbbbb);
   font-size: 24px;
   color: black;
+  display: none;
   align-items: center;
   justify-content: center;
   border-radius: 2px;
