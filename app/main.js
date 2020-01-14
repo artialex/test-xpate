@@ -6,9 +6,9 @@ import { EXTRA_SCALE_WHEN_ACTIVE } from './constants'
 
 // -- Setup --------------------------------------------------------------------
 
-const blueButton = document.querySelector('.button')
-const buttonText = document.querySelector('.text')
-const grayBlock = document.querySelector('.gray-block')
+let blueButton = document.querySelector('.button')
+let buttonText = document.querySelector('.text')
+let grayBlock = document.querySelector('.gray-block')
 
 gsap.registerPlugin(Draggable)
 gsap.registerPlugin(CSSRulePlugin)
