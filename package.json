@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel app/index.html",
-    "build": "parcel build app/index.html --public-url ./animation/"
+    "build": "parcel build app/index.html --public-url='./'"
   },
   "keywords": [],
   "author": "",
