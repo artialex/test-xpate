@@ -123,7 +123,7 @@ blueButton.addEventListener('mouseenter', handleMouseEnter)
 
 blueButton.addEventListener('mouseleave', handleMouseLeave)
 
-// -- Blue Button --------------------------------------------------------------
+// -- Blue Button Animation ----------------------------------------------------
 
 let blueButtonAnim = gsap.timeline({
   paused: true,

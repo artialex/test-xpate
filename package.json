@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel app/index.html --host 0.0.0.0",
+    "start": "parcel app/index.html",
     "build": "parcel build app/index.html --public-url='./'"
   },
   "keywords": [],
