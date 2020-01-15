@@ -122,6 +122,19 @@ let handleMouseLeave = () => {
 blueButton.addEventListener('mouseenter', handleMouseEnter)
 blueButton.addEventListener('mouseleave', handleMouseLeave)
 
+// -- Blue Button MouseDown Animation ----------------------------------------------
+
+let blueButtonMouseDownAnim = gsap.to(blueButton, {
+  scale: '.99',
+  paused: true,
+  duration: 0.4,
+  ease: 'expo'
+})
+
+let handleMouseDown = () => {
+  blueButtonMouseDownAnim.play()
+}
+
 // -- Blue Button Animation ----------------------------------------------------
 
 let blueButtonAnim = gsap.timeline({
@@ -142,8 +155,8 @@ blueButtonAnim.fromTo(
     duration: 0.3,
     ease: 'sine.in',
     rotationY: 180,
-    width: '101vw', // Fixes 1 pixel gap on iPhone
-    height: '100vh',
+    width: '100%',
+    height: '100%',
     borderRadius: 0
   }
 )
@@ -159,20 +172,19 @@ blueButtonAnim.fromTo(
 
 blueButton.addEventListener('click', () => {
   if (blueButtonAnim.reversed()) {
-    // Hover off and remove `active` & `hover` listeners
     handleMouseLeave()
     blueButton.classList.remove('activatable')
     blueButton.removeEventListener('mouseenter', handleMouseEnter)
+    blueButton.addEventListener('mousedown', handleMouseDown)
 
-    // Play animation
     blueButtonAnim.play()
   } else {
-    // Add `active` & `hover` listeners
     blueButton.classList.add('activatable')
     blueButton.addEventListener('mouseenter', handleMouseEnter)
+    blueButton.removeEventListener('mousedown', handleMouseDown)
 
-    // Play reverse animation
     blueButtonAnim.reverse()
+    blueButtonMouseDownAnim.reverse()
     grayBlockAnim
       .invalidate()
       // Quickly hide gray block
