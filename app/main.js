@@ -142,6 +142,7 @@ let blueButtonAnim = gsap.timeline({
   reversed: true,
   onComplete() {
     grayBlockAnim.timeScale(1).play(0)
+    blueButton.addEventListener('mousedown', handleMouseDown)
   }
 })
 
@@ -175,7 +176,6 @@ blueButton.addEventListener('click', () => {
     handleMouseLeave()
     blueButton.classList.remove('activatable')
     blueButton.removeEventListener('mouseenter', handleMouseEnter)
-    blueButton.addEventListener('mousedown', handleMouseDown)
 
     blueButtonAnim.play()
   } else {
